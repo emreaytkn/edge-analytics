@@ -1,3 +1,199 @@
 
+<div class="uxt uxt-defaults forceDefaultElements">
 
+<div class="appWrapper has-appBarAdvanced has-appBarAdvanced-collapsed">
+
+  <div class="appWrapper__regions has-appHeader has-contextRegion has-leadingRegion contextRegion-is-expanded appWrapper__regions--pushLayout">
+
+      <section class="appHeader">
+          <div class="appHeader__breadcrumb">
+              <div class="breadcrumb">
+                  <div class="breadcrumb__item">
+                      <a href="#">Level 1</a>
+                  </div>
+                  <div class="breadcrumb__item">
+                      <a href="#">Level 2</a>
+                  </div>
+                  <div class="breadcrumb__item">
+                      <a href="#">Level 3</a>
+                  </div>
+                  <div class="breadcrumb__item is-current">
+                      <a href="#">Current</a>
+                  </div>
+              </div>
+          </div>
+          <div class="appHeader__content">
+              Optional content
+          </div>
+          <div class="appHeader__viewToggler">
+              <button class="button button--ghost has-icon-only button--leading" id="toggleLeadingRegionDemo">
+                  <span aria-hidden="true" class="iconUxt"></span>
+              </button>
+
+              <button class="button button--ghost has-icon-only button--context" id="toggleContextRegionDemo">
+                  <span aria-hidden="true" class="iconUxt is-flipped-horizontal"></span>
+              </button>
+          </div>
+      </section>
+
+      <section class="leadingRegion">
+        
+      </section>
+
+      <section class="mainRegion">
+          <div class="contentHeader">
+              <div class="contentHeader__header">
+                  <h1 class="header__headline">Edge Analytics</h1>
+                  <div class="header__subline">Optional subline</div>
+              </div>
+
+              <div class="contentHeader__actions">
+                  <button class="button button--secondaryContentAction">
+                      <span class="iconUxt addCircle" aria-hidden="true"></span>
+                      Add Button
+                  </button>
+
+                  <a class="button button--secondaryContentAction" href="#">
+                      <span class="iconUxt edit" aria-hidden="true"></span>
+                      Edit Link
+                  </a>
+
+                  <a class="button button--secondaryContentAction" href="#">
+                      <span class="iconUxt delete" aria-hidden="true"></span>
+                      Delete Link
+                  </a>
+              </div>
+          </div>
+
+          <div class="inputGroup">
+            <label class="inputGroup__label" for="text-input01">
+                Text input
+            </label>
+            <input class="inputGroup__textInput" type="text" id="text-input01" [(ngModel)]="testMessage"
+            />
+            <div class="inputGroup__description">
+                Text input description.
+            </div>
+            
+          </div>
+          <button class="button button--primary" (click)="onSendMessage()">Send</button>
+          
+      </section>
+
+      <section class="contextRegion">
+          <button class="button button--secondary" id="toggleSlidingBehaviour">
+              Toggle sliding behaviour for demo
+          </button>
+      </section>
+
+  </div>
+
+  <nav class="appBarAdvanced">
+      <div class="appBarAdvanced__inner">
+          <div class="appBarAdvanced__header">
+              <!-- optional header -->
+          </div>
+          <ul class="appBarAdvanced__content">
+              <li class="level1 is-home">
+                  <a href="#" class="item__link">
+                      <div class="item__icon">
+                          <i aria-hidden="true" class="iconUxt home"></i>
+                      </div>
+                      <span class="item__title">Home</span>
+                  </a>
+              </li>
+              <li class="level1 is-active">
+                  <a href="#" class="item__link">
+                      <div class="item__icon has-notification">
+                          <i aria-hidden="true" class="iconUxt chartPie"></i>
+                      </div>
+                      <span class="item__title">Issues</span>
+                      <span class="badge">31</span>
+                  </a>
+                  <ul class="level2">
+                      <li class="subitem">
+                          <a href="#">Details</a>
+                      </li>
+                      <li class="subitem">
+                          <a href="#">Activity</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="level1">
+                  <a href="#" class="item__link">
+                      <div class="item__icon">
+                          <i aria-hidden="true" class="iconUxt shoppingCart"></i>
+                      </div>
+                      <span class="item__title">Activity</span>
+                  </a>
+                  <ul class="level2">
+                      <li class="subitem">
+                          <a href="#">Details</a>
+                      </li>
+                      <li class="subitem">
+                          <a href="#">Activity</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="level1">
+                  <a href="#" class="item__link">
+                      <div class="item__icon">
+                          <i aria-hidden="true" class="iconUxt hierarchy"></i>
+                      </div>
+                      <span class="item__title">Members</span>
+                  </a>
+                  <ul class="level2">
+                      <li class="subitem">
+                          <a href="#">Details</a>
+                      </li>
+                      <li class="subitem">
+                          <a href="#">Activity</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="level1 has-separator">
+                  <a href="#" class="item__link">
+                      <div class="item__icon has-notification">
+                          <i aria-hidden="true" class="iconUxt subtenant4"></i>
+                      </div>
+                      <span class="item__title">Settings</span>
+                      <span class="badge">12</span>
+                  </a>
+                  <ul class="level2">
+                      <li class="subitem">
+                          <a href="#">Details</a>
+                      </li>
+                      <li class="subitem">
+                          <a href="#">Activity</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="level1">
+                  <a href="#" class="item__link">
+                      <div class="item__icon has-notification">
+                          <i aria-hidden="true" class="iconUxt chartTrend"></i>
+                      </div>
+                      <span class="item__title"> Tools </span>
+                      <span class="badge">4</span>
+                  </a>
+                  <ul class="level2">
+                      <li class="subitem">
+                          <a href="#"> Details </a>
+                      </li>
+                      <li class="subitem">
+                          <a href="#"> Activity </a>
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+          <div class="appBarAdvanced__footer">
+              <a href="#" id="appBar--expander">
+                  <!-- optional expand / collapse label -->
+                  <span class="item__title">Collapse</span>
+              </a>
+          </div>
+      </div>
+  </nav>
+</div>
+</div>
 <router-outlet></router-outlet>
