@@ -44,6 +44,10 @@ Control Center is [UP]
 
 This manual assumes that the services Zookeeper, Kafka, Connect, and MQTT Broker use default values.
 
+In order to check the status of core services:
+
+> confluent local services status
+
 ## Setup Kafka Clusters
 
 For seting up the MQTT-proxy, we need to install a **Kafka Connect** plugin named [kafka-connect-mqtt v1.7.1](https://www.confluent.io/hub/confluentinc/kafka-connect-mqtt) for sending and receiving data from a Mqtt broker. Download ZIP version, and extract it onto one of the directories that is listed on the Connect worker's *plugin.path* configuration properties.
