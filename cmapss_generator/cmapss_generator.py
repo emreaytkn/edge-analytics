@@ -7,7 +7,6 @@ import joblib
 from datasource.avro_sink import AvroSink
 
 INPUT_TOPIC = 'cmapss-in'
-OUTPUT_TOPIC = 'cmapss-out'
 
 # Read cmapss test dataset into pandas dataframe
 cmapss_data = pd.read_csv("../data/cmapss_test_data.csv")

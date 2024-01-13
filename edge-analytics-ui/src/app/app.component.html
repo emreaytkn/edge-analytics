@@ -78,6 +78,64 @@
           </div>
           <button class="button button--primary" (click)="onSendMessage()">Send Kafka Message</button>
           <button class="button button--primary" (click)="onTestKafkaStreams()">Test Kafka Streams</button>
+          <button class="button button--primary" (click)="onGetCmapssExperimentResults()">Get All Experiment Results</button>
+
+
+          <div class="list">
+            <ul class="list__list">
+                <div *ngFor="let result of cmapssInferenceResults; index as i">
+                    <li class="list__item is-info" 
+                        [ngClass]="{'is-info': isInfo(result), 
+                                    'is-warning' : isWarning(result),
+                                    'is-error': isError(result)  }">
+                        <div class="item__checkbox">
+                            <input type="checkbox" id="checkboxList01" value="checkbox01" />
+                        </div>
+                        <div class="item__icon">
+                            <span class="iconUxt asset" aria-hidden="true"></span>
+                        </div>
+                        <div class="item__content">
+                            <div class="content__column content__column--primary has-default-width-50 sm-60 xs-100">
+                                <h4 class="item__title">
+                                    Engine {{i+1}}
+                                </h4>
+                                <div class="item__description">
+                                    This event happened <a href="#"> TBD minutes ago, at TBD with id: {{result.experimentId}}</a>
+                                </div>
+                            </div>
+                            <div class="content__column has-default-width-10 xl-10 xs-hide sm-hide">
+                                <div class="item__meta">
+                                    RUL
+                                </div>
+                            </div>
+                            <div class="content__column has-default-width-10 sm-10">
+                                <i aria-hidden="true" class="iconUxt attention filled has-color-primary"
+                                [ngClass]="{ 'errorAlert filled has-color-warning': isWarning(result),
+                                'errorAlert filled has-color-error': isError(result)  }"></i>
+                            </div>
+                            <div class="content__column has-default-width-10 sm-10">
+                                <span class="badge has-bgColor-base600 has-color-base1000">
+                                    {{result.prediction}}
+                                </span>
+                            </div>
+                            <div class="content__column has-default-width-20 has-alignment-right">
+                                <button class="button--secondary has-icon-only">
+                                    <span class="iconUxt edit" aria-hidden="true"></span>
+                                </button>
+                                <button class="button--secondary has-icon-only">
+                                    <span class="iconUxt clipboardCheck" aria-hidden="true"></span>
+                                </button>
+                                <button class="button button--ghost has-icon-only">
+                                    <span class="iconUxt bold more" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </li>
+                </div>
+            </ul>
+        </div>
+        
       </section>
 
       <section class="contextRegion">

@@ -38,4 +38,9 @@ public class KafkaTopicConfig {
         return new NewTopic("mqtt.random.cmaps", 1, (short)1);
     }
 
+    @Bean
+    public NewTopic cmapssPredictionTopic() {
+        return new NewTopic("cmapss-output", 1, (short)1);
+    }
+
 }
