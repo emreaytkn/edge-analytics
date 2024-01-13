@@ -1,0 +1,21 @@
+{
+ "type": "record",
+ "name": "CMAPSS",
+ "fields": [
+     {"name": "cycle", "type": "float"},
+     {"name": "lpc_outlet_temp", "type": "float"},
+     {"name": "hpc_outlet_temp", "type": "float"},
+     {"name": "lpt_outlet_temp", "type": "float"},
+     {"name": "bypass_duct_pressure", "type": "float"},
+     {"name": "hpc_outlet_pressure", "type": "float"},
+     {"name": "physical_fan_speed", "type": "float"},
+     {"name": "physical_core_speed", "type": "float"},
+     {"name": "hpc_outlet_static_pressure", "type": "float"},
+     {"name": "ratio_of_fuel_flow", "type": "float"},
+     {"name": "corrected_fan_speed", "type": "float"},
+     {"name": "bypass_ratio", "type": "float"},
+     {"name": "bleed_enthalpy", "type": "float"},
+     {"name": "hpt_cool_air_flow", "type": "float"},
+     {"name": "lpt_cool_air_flow", "type": "float"}
+ ]
+}

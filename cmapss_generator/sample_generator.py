@@ -83,8 +83,8 @@ def runCmapssRandomGenerator():
     
     print(cmapss_random_payload, flush=True)
     
-    # kafkaProducer.sendSample(topic="emergency_generator",data=check_generator)
-    mqttProducer.publish_to_topic(topic="cmapss_random_generator", data=cmapss_random_payload)
+    # To listen messages: mosquitto_sub -v -t cmapss_random_generator
+    mqttProducer.publish_to_topic(topic="cmapss-random-generator", data=cmapss_random_payload)
     
     sleep(sleeptime)
 
