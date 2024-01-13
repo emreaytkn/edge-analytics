@@ -3,7 +3,7 @@
 import pandas as pd
 from sklearn import preprocessing
 import avro.schema
-import io
+import joblib
 from datasource.avro_sink import AvroSink
 
 INPUT_TOPIC = 'cmapss-in'
@@ -13,12 +13,13 @@ OUTPUT_TOPIC = 'cmapss-out'
 cmapss_data = pd.read_csv("../data/cmapss_test_data.csv")
 cmapss_label = pd.read_csv("../data/cmapss_test_labels.csv")
 
-#features = pd.DataFrame(preprocessing.scale(cmapss_data))
-#features = cmapss_data.to_numpy()
+scaler = joblib.load("../model/cmapss_scaler.save") 
+
+cmapss_data = pd.DataFrame(scaler.transform(cmapss_data))
 
 cmapss = AvroSink(
     boostrap_servers="localhost:9092", topic=INPUT_TOPIC, 
-    data_scheme_filename='data_schema.avsc', label_scheme_filename='label_schema.avsc',
+    data_scheme_filename='../schema/data_schema.avsc', label_scheme_filename='../schema/label_schema.avsc',
     deployment_id=1)
 
 for i in range (0, cmapss_data.shape[0]):
