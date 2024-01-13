@@ -24,4 +24,10 @@ export class AppComponent {
       console.log(response);
     });
   }
+
+  onTestKafkaStreams() {
+    this.kafkaTestService.postKafkaStreamsWordCount(this.testMessage).subscribe(response => {
+      console.log(response);
+    });
+  }
 }
