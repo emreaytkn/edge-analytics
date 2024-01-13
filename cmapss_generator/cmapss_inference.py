@@ -6,9 +6,9 @@ import io
 from avro.io import DatumWriter, BinaryEncoder
 from kafka import KafkaProducer
 
-INPUT_TOPIC = 'hcopd-in'
-OUTPUT_TOPIC = 'hcopd-out'
-BOOTSTRAP_SERVERS= '127.0.0.1:9094'
+INPUT_TOPIC = 'cmapss-in'
+OUTPUT_TOPIC = 'cmapss-output'
+BOOTSTRAP_SERVERS= '127.0.0.1:9092'
 ITEMS_TO_PREDICT = 10
 
 class AvroInference():
